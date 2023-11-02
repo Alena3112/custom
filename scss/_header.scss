@@ -1,0 +1,236 @@
+header {
+  background: $black;
+}
+.header__wrap {
+  max-width: 1266px;
+  min-height: 138px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 38px;
+  margin-left: 108px;
+  @media screen and (max-width: 1360px) {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 1199px) {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 991px) {
+    max-width: 760px;
+    margin: 0 auto;
+    padding-top: 28px;
+    min-height: 108px;
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 575px) {
+    max-width: 449px;
+  }
+  @media screen and (max-width: 468px) {
+    padding-top: 8px;
+    min-height: 88px;
+    max-width: 300px;
+  }
+}
+.header-menu {
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 17px;
+  margin-left: 58px;
+  // @media screen and (max-width: 1360px) {
+  //   margin-left: 58px;
+  // }
+  @media screen and (max-width: 1199px) {
+    margin-left: 28px;
+  }
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+
+  li {
+    //padding-right: 43px;
+    text-decoration: none;
+    font-family: $regular;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-left: 43px;
+    @media screen and (max-width: 1360px) {
+      padding-right: 10px;
+      margin-left: 30px;
+    }
+    @media screen and (max-width: 1199px) {
+      padding-right: 20px;
+      margin-left: 0px;
+    }
+  }
+  a {
+    color: #beb8b1;
+  }
+}
+li:hover {
+  a {
+    color: #936f49;
+  }
+}
+
+.lang {
+  margin-left: 139px;
+  padding-top: 18px;
+  @media screen and (max-width: 1360px) {
+    margin-left: 39px;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-left: 29px;
+  }
+  @media screen and (max-width: 991px) {
+    position: absolute;
+    margin-left: 580px;
+    padding-top: 22px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-left: 350px;
+  }
+  @media screen and (max-width: 575px) {
+    margin-left: 310px;
+  }
+  @media screen and (max-width: 468px) {
+    margin-left: 200px;
+    padding-top: 55px;
+  }
+
+  a {
+    margin-right: 18px;
+    //padding-left: 18px;
+    font-family: $regular;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #beb8b1;
+    @media screen and (max-width: 1360px) {
+      margin-right: 10px;
+    }
+    @media screen and (max-width: 1199px) {
+      margin-right: 10px;
+    }
+  }
+  a:hover {
+    color: #936f49;
+  }
+}
+.header__list.clocks {
+  margin-left: 10px;
+  @media screen and (max-width: 1360px) {
+    margin-left: 1px;
+  }
+  @media screen and (max-width: 991px) {
+    margin-top: -30px;
+    margin-bottom: 30px;
+  }
+}
+
+.clock::before {
+  display: block;
+  content: url(../img/clockwise.png);
+  //margin-right: 10px;
+}
+
+.container-burger {
+  display: inline-block;
+  cursor: pointer;
+  display: none;
+  @media screen and (max-width: 991px) {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 750px;
+    z-index: 20;
+  }
+  @media screen and (max-width: 880px) {
+    margin-left: 700px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-left: 500px;
+  }
+  @media screen and (max-width: 575px) {
+    margin-left: 430px;
+  }
+  @media screen and (max-width: 468px) {
+    margin-left: 220px;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 45px;
+  height: 2px;
+  background-color: $braun;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+/* Поворот первой полосы */
+.bar1.change {
+  -webkit-transform: rotate(-45deg) translate(-9px, 10px);
+  transform: rotate(-45deg) translate(-9px, 10px);
+}
+
+/* Исчезание второй полосы */
+.bar2.change {
+  opacity: 0;
+}
+
+/* Поворот последней полосы */
+.bar3.change {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.header-menu.click {
+  @media (max-width: 991px) {
+    transition-duration: 0.5s;
+  }
+}
+.menu.click {
+  @media (max-width: 991px) {
+    position: absolute;
+    display: block;
+    background: $black;
+    width: 40%;
+    height: auto;
+    line-height: 50px;
+    margin-top: -38px;   
+    z-index: 10; 
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 48%;
+    margin-top: -38px;
+    margin-left: 25px;
+  }
+  @media screen and (max-width: 575px) {
+    width: 58%;
+    margin-top: -28px;
+    margin-left: 85px;
+  }
+  @media screen and (max-width: 468px) {
+    margin-top: -18px;
+    width: 63%;
+    margin-left: 5px;
+  }
+}
+.header__list.click {
+  @media (max-width: 991px) {
+    margin-top: 50px;
+  }
+}
