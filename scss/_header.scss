@@ -110,6 +110,7 @@ li:hover {
   @media screen and (max-width: 468px) {
     position: absolute;
     display: flex;
+    justify-content:space-around;
    // margin-left: 200px;
    right: 0;
    bottom: 0;
@@ -128,6 +129,10 @@ li:hover {
     }
     @media screen and (max-width: 1199px) {
       margin-right: 10px;
+    }
+    @media screen and (max-width: 468px) {
+ margin-right: 0;
+ margin-left: 10px;
     }
   }
   a:hover {
