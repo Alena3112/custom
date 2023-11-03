@@ -81,9 +81,17 @@
   position: absolute;
   margin-top: 230px;
   margin-left: 325px;
+  @media screen and (max-width: 1199px) {
+    margin-top: 180px;
+    margin-left: 205px;
+  }
   @media screen and (max-width: 991px) {
     margin-top: 130px;
     margin-left: 225px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    margin-left: 125px;
   }
   @media screen and (max-width: 468px) {
   //  width: 80%;
